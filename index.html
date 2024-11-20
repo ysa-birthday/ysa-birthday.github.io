@@ -32,7 +32,7 @@
 
             
             <!-- <div class="text-center mt-4 mb-4">Fill out the form below to confirm your attendance. We hope to see you there!</div> -->
-            <div class="form">
+            <!-- <div class="form">
                 <form method="POST" action="https://script.google.com/macros/s/AKfycbx6F31Zd6hLyQFa90dnDe1S7pYQMwDCWHQRMLWAgchcLUoi-015PjGwkZihgdsMimo/exec">
                     <div class="form-group">
                         <label for="Name">Name</label>
@@ -48,7 +48,16 @@
                     </div>
                     <button type="submit" class="button w-100 p-2">CONFIRM YOUR RSVP</button>
                 </form>
-            </div>
+            </div> -->
+
+            <form 
+            method="POST" 
+            action="https://script.google.com/macros/s/AKfycbx6F31Zd6hLyQFa90dnDe1S7pYQMwDCWHQRMLWAgchcLUoi-015PjGwkZihgdsMimo/exec"
+            >
+            <input name="Email" type="email" placeholder="Email" required>
+            <input name="Name" type="text" placeholder="Name" required>
+            <button type="submit">Send</button>
+            </form>
         </div>
         
         <!-- Optional JavaScript -->
