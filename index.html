@@ -16,43 +16,62 @@
         <title>Ysa's 18th Birthday</title>
     </head>
     <body>
-        <div id="banner" class="mb-2 pt-3 pb-3">Please RSVP by December 21, 2024.</div>
-        <h1>RSVP</h1>
-        <div class="text-center">
-            <img src="./rsvp_main.png"  alt="green floral" id="green_floral_img">
-          </div>
-        <div class="mx-auto mt-4 mb-4" id="form">
-            
-            <h3 class="text-center">Ysa's 18th Birthday &amp; Debutante Ball</h3>
-            <div class="text-center mb-3" id="date">
-                <h4>Saturday, January 04, 2024 at 1:00 pm</h4>
-                <h4>Kiana Lodge</h4>
-                <div id="address">14976 Sandy Hook Rd NE, Poulsbo, WA</div>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#RSVP">RSVP</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">Event Details</a>
+              </li>
+            <li class="nav-item">
+                <a href="#">Location</a>
+            </li>
+          </ul>
+
+        <div id="home">
+            <h1 height="1000px">HOME</h1>
+        </div>
+        <div id="RSVP">
+            <div id="banner" class="mb-2 pt-3 pb-3">Please RSVP by December 21, 2024.</div>
+            <h1>RSVP</h1>
+            <div class="text-center">
+                <img src="./rsvp_main.png"  alt="green floral" id="green_floral_img">
             </div>
+            <div class="mx-auto mt-4 mb-4" id="form">
+                
+                <h3 class="text-center">Ysa's 18th Birthday &amp; Debutante Ball</h3>
+                <div class="text-center mb-3" id="date">
+                    <h4>Saturday, January 04, 2024 at 1:00 pm</h4>
+                    <h4>Kiana Lodge</h4>
+                    <div id="address">14976 Sandy Hook Rd NE, Poulsbo, WA</div>
+                </div>
 
-            
-            <!-- <div class="text-center mt-4 mb-4">Fill out the form below to confirm your attendance. We hope to see you there!</div> -->
-            <div class="form">
-                <form method="POST" action="https://script.google.com/macros/s/AKfycbx6F31Zd6hLyQFa90dnDe1S7pYQMwDCWHQRMLWAgchcLUoi-015PjGwkZihgdsMimo/exec">
-                    <div class="form-group">
-                        <label for="Name">Name</label>
-                        <input name="Name" type="text" class="form-control" placeholder="Name" required>
-                    </div>
+                
+                <!-- <div class="text-center mt-4 mb-4">Fill out the form below to confirm your attendance. We hope to see you there!</div> -->
+                <div class="form">
+                    <form method="POST" action="https://script.google.com/macros/s/AKfycbx6F31Zd6hLyQFa90dnDe1S7pYQMwDCWHQRMLWAgchcLUoi-015PjGwkZihgdsMimo/exec">
+                        <div class="form-group">
+                            <label for="Name">Name</label>
+                            <input name="Name" type="text" class="form-control" placeholder="First &amp; last name" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="Email">Email</label>
-                        <input name="Email" type="email" class="form-control" placeholder="Email" required>
-                    </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input name="Email" type="email" class="form-control" placeholder="Email" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="Message">Message (optional)</label>
-                        <textarea name="Message" class="form-control" rows="3" placeholder="Please list additional guest names here"></textarea>
-                    </div>
-                    <button type="submit" class="button w-100 p-2">CONFIRM YOUR RSVP</button>
-                </form>
+                        <div class="form-group">
+                            <label for="Message">Message (optional)</label>
+                            <textarea name="Message" class="form-control" rows="3" placeholder="Please list additional guest names here"></textarea>
+                        </div>
+                        <button type="submit" class="button w-100 p-2">CONFIRM YOUR RSVP</button>
+                    </form>
+                </div>
             </div>
         </div>
-        
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
