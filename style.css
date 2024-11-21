@@ -87,6 +87,13 @@ label {
     align-items: center; /* Centers content horizontally */
 }
 
+#home_title {
+    font-family: "Pinyon Script", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
 #top_floral_img {
     position: absolute; /* Place it relative to the body */
     top: 0; /* Align to the top */
@@ -126,6 +133,16 @@ label {
     #top_floral, #bottom_floral {
         display: none;
     }
+}
+
+#details {
+    height: 100vh;
+    background-color: #8f9873;
+    background-image: url("./damask_pattern.png");
+}
+
+.program_details {
+    background-color: white;
 }
 /****** SUCCESS SCREEN MODAL ON FORM SUBMIT *****/
 #modalTitle {
