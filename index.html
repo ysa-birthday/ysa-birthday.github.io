@@ -16,6 +16,7 @@
         <title>Ysa's 18th Birthday</title>
     </head>
     <body>
+        <img src="./top_right_floral.png" alt="Top corner floral" id="top_floral_img">
         <ul class="nav justify-content-center">
             <li class="nav-item">
               <a href="#home">Home</a>
@@ -31,9 +32,22 @@
             </li>
           </ul>
 
+          <!-- HOME SECTION -->
         <div id="home">
-            <h1 height="1000px">HOME</h1>
+            <img src="./floral_top.png" alt="foliage above" id="top_floral">
+            <h3 class="text-center">Ysa's 18th Birthday &amp; Debutante Ball</h3>
+            <div class="text-center mb-3" id="date">
+                <h4 class="ml-3 mr-3">Saturday, January 04, 2025 at 1:00 pm</h4>
+                <h4 class="ml-3 mr-3">Kiana Lodge</h4>
+                <div id="address">14976 Sandy Hook Rd NE, Poulsbo, WA</div>
+            </div>
+            <img src="./floral_bottom.png" alt="foliage below" id="bottom_floral">
+            <img src="./bottom_left_floral.png" alt="bottom left corner floral" id="bottom_floral_img">
         </div>
+      
+        <!-- EVENT DETAILS SECTION -->
+
+        <!-- RSVP SECTION -->
         <div id="RSVP">
             <div id="banner" class="mb-2 pt-3 pb-3">Please RSVP by December 21, 2024.</div>
             <h1>RSVP</h1>
@@ -44,7 +58,7 @@
                 
                 <h3 class="text-center">Ysa's 18th Birthday &amp; Debutante Ball</h3>
                 <div class="text-center mb-3" id="date">
-                    <h4>Saturday, January 04, 2024 at 1:00 pm</h4>
+                    <h4>Saturday, January 04, 2025 at 1:00 pm</h4>
                     <h4>Kiana Lodge</h4>
                     <div id="address">14976 Sandy Hook Rd NE, Poulsbo, WA</div>
                 </div>
@@ -72,6 +86,53 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- MODAL ON SUCCESS -->
+        <div id="responseModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Thank you for attending</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p id="modalMessage">Your RSVP has been successfully submitted and we look forward to seeing you on January 4th 2025!</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="button w-100 p-2" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+            </div>
+        </div>
+  
+        <!-- MODAL SCRIPT ON SUCCESS -->
+         <script>
+            // Form Submission Handling
+            document.querySelector('form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Mocking success response (you can integrate with actual form responses)
+                const isSuccess = true; // Simulate success or failure
+                
+                const modalTitle = document.getElementById('modalTitle');
+                const modalMessage = document.getElementById('modalMessage');
+                
+                if (isSuccess) {
+                    modalTitle.textContent = "Success";
+                    modalMessage.textContent = "Your RSVP has been successfully submitted!";
+                } else {
+                    modalTitle.textContent = "Error";
+                    modalMessage.textContent = "There was an error submitting your RSVP. Please try again.";
+                }
+
+                // Display the modal
+                $('#responseModal').modal('show');
+            });
+
+         </script>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
