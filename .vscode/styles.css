@@ -1,0 +1,558 @@
+body {
+    background-color: white;
+    background-image: url("./bcg.png");
+}
+
+/**** CURSIVE FONT ****/
+#windsong {
+    font-family: "WindSong", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+  }
+  
+/**** DESCRIPTION FONT ****/
+#spectral {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+}
+
+/**** HEADINGS/TITLE FONT ****/
+#playfair_sc{
+    font-family: "Playfair Display SC", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap; 
+}
+
+#playfair {
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+/***** HOME ****/
+a, a:link, a:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+.hidden {
+    opacity: 0 !important;
+    transform: translateY(20px); 
+  }
+
+/* Fade-in class */
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /**** HOME PORTRAIT MODE *****/
+#home {
+    height: 100vh; 
+    width: 100%; 
+    background-image: url('./main_img1.png'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: top; 
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    /* justify-content: flex-end; */
+    align-items: center;
+    padding-bottom: 20px; /* Add spacing from the bottom */
+    box-sizing: border-box; /* Ensure padding is accounted for */
+    position: relative; /* Ensure positioning context for child elements */
+}
+
+.home_join_us {
+    position: absolute;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 15vh;
+    margin-left: 50px;
+    margin-right: 10px;
+    z-index: 1;
+    text-align: right;
+}
+
+.home_roman_numeral {
+    opacity: 0.8;
+    line-height: 0.7; /* Adjusts the spacing between lines */
+    letter-spacing: 0.1em; /* Optional: Adjust letter spacing */
+    color: white;
+    font-size: 12rem;
+    position: absolute; /* Position it behind other elements */
+    bottom: 10vh; /* Adjust based on where you want it to appear */
+    z-index: 1; /* Send this element behind other content */
+    text-align: center;
+    align-items: center;
+}
+
+.newline {
+    display: block; /* Forces a line break */
+    margin-top: 10px; /* Optional: Add additional space above the new line */
+}
+
+.home_description {
+    position: absolute;
+    z-index: 2; /* Ensure they appear above the background text */
+    bottom: 0;
+}
+
+.home_name, .home_birthday_text {
+    text-align: center;
+    color: black;
+}
+
+.home_name {
+    font-size: 3rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.home_birthday_text {
+    font-size: 2.5rem;
+    margin-top: -35px;
+    text-transform: uppercase;
+}
+
+  /**** HOME LANDSCAPE MODE *****/
+#main_text {
+    margin-top: 10vh;
+}
+
+#main_photo {
+    height: 100vh; 
+    width: 100%; 
+    background-image: url('./main_img.png'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    /* justify-content: flex-end; */
+    align-items: center;
+    padding-bottom: 20px; /* Add spacing from the bottom */
+    box-sizing: border-box; /* Ensure padding is accounted for */
+    position: relative; /* Ensure positioning context for child elements */
+}
+
+.home_roman_numeral_landscape {
+    opacity: 0.8;
+    line-height: 0.7; /* Adjusts the spacing between lines */
+    letter-spacing: 0.1em; /* Optional: Adjust letter spacing */
+    color: white;
+    font-size: 12rem;
+    position: absolute; /* Position it behind other elements */
+    bottom: 1vh; /* Adjust based on where you want it to appear */
+    z-index: 1; /* Send this element behind other content */
+    text-align: center;
+    align-items: center;
+}
+
+.home_date_landscape {
+    font-size: 4vw;
+    margin-right: 20px;
+}
+
+.home_time_landscape {
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.lets_celebrate_landscape {
+    font-size: max(5vw, 16px);
+    margin-right: 20px;
+}
+
+/***** DATE PORTRAIT MODE ****/
+
+#date {
+    height: 100vh; 
+    width: 100%; 
+    background-image: url('./date_img.png'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: top; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    align-items: center;
+    padding-bottom: 20px; 
+    box-sizing: border-box; 
+    position: relative; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 2s ease-out; /* Ensures smooth fade */
+}
+
+.date_title {
+    line-height: 0.7; /* Adjusts the spacing between lines */
+    letter-spacing: 0.1em; /* Optional: Adjust letter spacing */
+    color: white;
+    font-size: 15rem;
+    position: absolute; /* Position it behind other elements */
+    bottom: 10vh; /* Adjust based on where you want it to appear */
+    z-index: 1; /* Send this element behind other content */
+}
+
+.date_title_landscape {
+    opacity: 0.5;
+    line-height: 0.7; /* Adjusts the spacing between lines */
+    letter-spacing: 0.1em; /* Optional: Adjust letter spacing */
+    color: white;
+    font-size: 15rem;
+    position: absolute; /* Position it behind other elements */
+    bottom: 1vh; /* Adjust based on where you want it to appear */
+    z-index: 1; /* Send this element behind other content */
+}
+
+.date_date {
+    word-spacing: 60px;
+    align-self: end;
+    font-size: 1.8rem;
+    position: relative; /* Ensure they are above the background */
+    z-index: 2; /* Ensure they appear above the background text */
+    margin-right: 20px;
+}
+
+.date_number {
+    transform: translate(-80px, -100px);
+    font-size: 10rem;
+    letter-spacing: -5px;
+    position: absolute;
+}
+
+.date_description {
+    text-align: right;
+    align-self: end;
+    margin-right: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/***** DATE LANDSCAPE MODE ****/
+#date_photo_landscape {
+    height: 100vh; 
+    width: 100%; 
+    background-image: url('./date_img.png'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    /* justify-content: flex-end; */
+    align-items: center;
+    padding-bottom: 20px; /* Add spacing from the bottom */
+    box-sizing: border-box; /* Ensure padding is accounted for */
+    position: relative; /* Ensure positioning context for child elements */
+}
+
+.date_title_landscape {
+    line-height: 0.7; /* Adjusts the spacing between lines */
+    letter-spacing: 0.1em; /* Optional: Adjust letter spacing */
+    color: white;
+    font-size: 18rem;
+    position: absolute; /* Position it behind other elements */
+    bottom: 1vh; /* Adjust based on where you want it to appear */
+    z-index: 1; /* Send this element behind other content */
+}
+
+#date_floral_landscape {
+    width: 33%;
+}
+/***** DETAILS PORTRAIT ****/
+#details {
+    height: auto; 
+    width: 100%; 
+    text-align: right;
+    display: flex; 
+    flex-direction: column; 
+    align-items: right;
+    padding-bottom: 20px; 
+    box-sizing: border-box; 
+    position: relative; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 2s ease-out; /* Ensures smooth fade */
+}
+
+.details_title {
+    margin-top: 50px;
+    font-size: 5rem;
+    align-self: center;
+}
+
+.lets_celebrate {
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.details_sub_title {
+    margin-top: 50px;
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.details_sub_description {
+    margin-right: 15px;
+}
+
+.directions_title {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/***** RSVP PORTRAIT ****/
+#rsvp {
+    height: 100vh; 
+    width: 100%; 
+    background-image: url('./rsvp_img.png'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: top; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    align-items: center;
+    padding-bottom: 20px; 
+    box-sizing: border-box; 
+    position: relative; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 2s ease-out; /* Ensures smooth fade */
+}
+
+.rsvp_date {
+    /* word-spacing: 60px; */
+    align-self: end;
+    font-size: 1.8rem;
+    position: relative; /* Ensure they are above the background */
+    z-index: 2; /* Ensure they appear above the background text */
+    margin-right: 20px;
+}
+
+.rsvp_number {
+    transform: translate(-130px, -100px);
+    font-size: 10rem;
+    /* letter-spacing: -5px; */
+    position: absolute;
+}
+
+.rsvp_description {
+    margin-top: 50px;
+    text-align: center;
+    align-self: end;
+    margin-right: 20px;
+    position: relative;
+    z-index: 2;
+    margin-left: 20px;
+}
+
+#phone_format {
+    color: grey;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/***** RSVP FORM PORTRAIT ****/
+#RSVP_form {
+    /* height: 130vh;  */
+    width: 100%; 
+    text-align: left;
+    display: flex; 
+    flex-direction: column; 
+    align-items: left;
+    padding-bottom: 20px; 
+    box-sizing: border-box; 
+    position: relative; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 2s ease-out; /* Ensures smooth fade */
+}
+
+.form {
+    width: 75%;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #773c32;
+    margin: 40px;
+}
+
+.button {
+    background-color: #B7A696;
+    color: white;
+    border: none;
+}
+
+.button:hover {
+    background-color: #9c8671;
+}
+
+#green_floral_img {
+    width: 50%;
+}
+
+#end_floral_img {
+    width: 70%;
+    margin-top: 50px;
+}
+
+/****** SUCCESS SCREEN MODAL ON FORM SUBMIT *****/
+#modalTitle {
+    font-family: "Sedan SC", serif;
+}
+#modalMessage {
+    text-align: center;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/***** RSVP LANDSCAPE ****/
+#rsvp_photo_landscape {
+    height: 100vh; 
+    width: 100%; 
+    background-image: url('./rsvp_img.png'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: top; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    align-items: center;
+    padding-bottom: 20px; 
+    box-sizing: border-box; 
+    position: relative; 
+}
+
+#rsvp_floral_img_landscape {
+    width: 30%;
+}
+
+/***** COTILLION COURT PORTRAIT ****/
+#cotillion_court {
+    height: auto; 
+    width: 100%; 
+    text-align: right;
+    display: flex; 
+    flex-direction: column; 
+    align-items: right;
+    padding-bottom: 20px; 
+    box-sizing: border-box; 
+    position: relative; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 2s ease-out; /* Ensures smooth fade */
+}
+
+.cotillion_court_title {
+    margin-top: 100px;
+    font-size: rem;
+    align-self: center;
+}
+
+.escort {
+    align-self: center;
+    font-size: 2rem;
+}
+
+#girls {
+    text-align: left;
+}
+
+#boys {
+    text-align: right;
+}
+
+
+/***** COUNTDOWN CLOCK PORTRAIT ****/
+#countdown {
+    height: 100vh; 
+    width: 100%; 
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    padding-bottom: 20px; 
+    box-sizing: border-box; 
+    position: relative; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 2s ease-out; /* Ensures smooth fade */
+}
+
+#clockdiv {
+    font-family: sans-serif;
+    color: black;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#clockdiv>div {
+    padding: 10px;
+    border-radius: 3px;
+    display: inline-block;
+    background-color: #ffe6ec;
+}
+
+#clockdiv div>span {
+    font-size: 2.5rem;
+    color: black;
+    display: inline-block;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Style for visible text */
+.smalltext {
+    font-family: "Playfair Display SC", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap; 
+}
+
+.countdown_title {
+    margin-top: 100px;
+    font-size: 3rem;
+    align-self: center;
+}
+
+@media (orientation: portrait) {
+    #home_landscape, #date_landscape, #rsvp_landscape {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (orientation: landscape) {
+    #home, #details, #date, #rsvp, #RSVP_form, #cotillion_court {
+        display: none;
+        visibility: hidden;
+    }
+
+    #end_floral_img {
+        width: 25%;
+    }
+}
+
+/**** FOR DESKTOP FONT SIZING *****/
+@media (orientation: landscape) and (min-height: 500px) {
+
+}
