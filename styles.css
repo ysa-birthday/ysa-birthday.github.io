@@ -100,7 +100,7 @@ a, a:link, a:visited {
 .home_description {
     position: absolute;
     z-index: 2; /* Ensure they appear above the background text */
-    bottom: 0;
+    bottom: 15vh;
 }
 
 .home_name, .home_birthday_text {
@@ -215,19 +215,16 @@ a, a:link, a:visited {
 }
 
 .date_date {
-    word-spacing: 60px;
     align-self: end;
     font-size: 1.8rem;
     position: relative; /* Ensure they are above the background */
     z-index: 2; /* Ensure they appear above the background text */
     margin-right: 20px;
+    margin-bottom: -53px;
 }
 
 .date_number {
-    transform: translate(-80px, -100px);
     font-size: 10rem;
-    letter-spacing: -5px;
-    position: absolute;
 }
 
 .date_description {
