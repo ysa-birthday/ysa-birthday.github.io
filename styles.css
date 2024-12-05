@@ -125,9 +125,9 @@ a, a:link, a:visited {
     line-height: 0.7; /* Adjusts the spacing between lines */
     letter-spacing: 0.1em; /* Optional: Adjust letter spacing */
     color: white;
-    font-size: 9rem;
+    font-size: 16rem;
     position: absolute; /* Position it behind other elements */
-    bottom: 27vh; /* Adjust based on where you want it to appear */
+    bottom: 16vh; /* Adjust based on where you want it to appear */
     z-index: 1; /* Send this element behind other content */
     text-align: center;
     align-items: center;
@@ -141,7 +141,7 @@ a, a:link, a:visited {
 .home_description {
     position: absolute;
     z-index: 2; /* Ensure they appear above the background text */
-    bottom: 25vh;
+    bottom: 16vh;
 }
 
 .home_name, .home_birthday_text, .home_debutante {
@@ -150,7 +150,7 @@ a, a:link, a:visited {
 }
 
 .home_name {
-    font-size: 3rem;
+    font-size: 3.5rem;
     line-height: 1.2;
     text-transform: uppercase;
 }
