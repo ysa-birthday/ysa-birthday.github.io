@@ -408,24 +408,42 @@
 
     <!-- MODAL SCRIPT ON SUCCESS -->
     <script>
-        // Form Submission Handling
-        document.querySelector('form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Mocking success response (you can integrate with actual form responses)
-            const isSuccess = true; // Simulate success or failure
-            
+        document.querySelector('form').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent default form submission
+        
+            const submitButton = event.target.querySelector('button[type="submit"]'); 
             const modalTitle = document.getElementById('modalTitle');
             const modalMessage = document.getElementById('modalMessage');
-            
-            if (isSuccess) {
-                modalTitle.textContent = "Success";
-                modalMessage.textContent = "Your RSVP has been successfully submitted!";
-            } else {
+        
+               // Disable the submit button and show a loading message
+                submitButton.disabled = true;
+                modalTitle.textContent = "Submitting...";
+                modalMessage.textContent = "Please wait while we process your RSVP.";
+                $('#responseModal').modal('show');
+          
+                try {
+                // Example: Replace with your actual Google Sheets submission URL
+                const formData = new FormData(event.target); 
+                const response = await fetch('https://script.google.com/macros/s/AKfycbx6F31Zd6hLyQFa90dnDe1S7pYQMwDCWHQRMLWAgchcLUoi-015PjGwkZihgdsMimo/exec', {
+                    method: 'POST',
+                    body: formData,
+                });
+        
+                if (response.ok) { // Check if the response status is 200-299
+                    modalTitle.textContent = "Success";
+                    modalMessage.textContent = "Your RSVP has been successfully submitted!";
+                } else {
+                    modalTitle.textContent = "Error";
+                    modalMessage.textContent = "There was an error submitting your RSVP. Please try again.";
+                }
+            } catch (error) {
                 modalTitle.textContent = "Error";
-                modalMessage.textContent = "There was an error submitting your RSVP. Please try again.";
+                modalMessage.textContent = "Network error occurred. Please check your connection.";
+            } finally {
+                // Re-enable the submit button after the response
+                submitButton.disabled = false;
             }
-
+        
             // Display the modal
             $('#responseModal').modal('show');
         });
