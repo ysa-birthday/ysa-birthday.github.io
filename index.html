@@ -13,9 +13,21 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
         <title>Ysa's 18th Birthday</title>
 </head>
 <body>
+
+    <div class="loadingScreen">
+        <div class="loadingText" style="margin-right: 20px;" id="playfair_sc">
+            You're 
+            <span class="newline">Cordially</span>
+            <span class="newline">Invited</span>
+            </div>
+     
+    </div>
+
     <!-- PORTRAIT MODE -->
     <div id="home">
             <div class="home_roman_numeral" id="playfair_sc">
@@ -69,7 +81,7 @@
         </div>
         <div class="lets_celebrate" id="windsong">Let's Celebrate</div>
         <div class="details_sub_description" id="spectral">
-            Join us in celebration as we mark the momentous occasion of elegance, tradition, and cherished memories.
+            Join us January 4th, in celebration as we mark the momentous occasion of elegance, tradition, and cherished memories.
         </div>
         <div class="details_sub_title" id="windsong">Location</div>
         <div class="details_sub_description" id="spectral">
@@ -420,6 +432,23 @@
         </script>
 
     <script>
+        document.fonts.ready.then(() => {
+            const loadingText = document.querySelector('.loadingText');
+            loadingText.style.opacity = '1';
+        });
+
+        var loadingScreen = document.querySelector(".loadingScreen")
+
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                loadingScreen.classList.add('fade-out');
+            }, 1000);
+
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 2000)
+        });
+
         document.addEventListener("DOMContentLoaded", function () {
           const sections = [document.querySelector("#date"),
             document.querySelector("#details"),
