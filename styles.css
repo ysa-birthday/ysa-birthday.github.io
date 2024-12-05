@@ -141,7 +141,7 @@ a, a:link, a:visited {
 .home_description {
     position: absolute;
     z-index: 2; /* Ensure they appear above the background text */
-    bottom: 16vh;
+    bottom: 27vh;
 }
 
 .home_name, .home_birthday_text, .home_debutante {
