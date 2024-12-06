@@ -23,14 +23,17 @@
         <!-- <meta name="twitter:card" content="summary_large_image" /> -->
 </head>
 <body>
-
+    <audio id="backgroundMusic" loop>
+        <source src="./background_music.mp3" type="audio/mpeg">
+    </audio>
+    
     <div class="loadingScreen">
-        <div class="loadingText" style="margin-right: 20px;" id="playfair_sc">
+        <div class="loadingText" id="playfair_sc">
             You're 
             <span class="newline">Cordially</span>
             <span class="newline">Invited</span>
-            </div>
-     
+        </div>
+        <button id="playPauseButton" class="center"></button>
     </div>
 
     <!-- PORTRAIT MODE -->
@@ -488,23 +491,29 @@
 
         </script>
 
+    <!-- FOR AUDIO BACKGROUND MUSIC -->
     <script>
-        document.fonts.ready.then(() => {
-            const loadingText = document.querySelector('.loadingText');
-            loadingText.style.opacity = '1';
-        });
-
-        var loadingScreen = document.querySelector(".loadingScreen")
-
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                loadingScreen.classList.add('fade-out');
-            }, 1000);
-
-            setTimeout(function() {
+        const audio = document.getElementById('backgroundMusic');
+        const button = document.getElementById('playPauseButton');
+        const loadingScreen = document.querySelector('.loadingScreen');
+    
+        button.addEventListener('click', function () {
+            if (audio.paused) {
+                audio.play(); // Start the music
+            }
+            
+            // Trigger the fade-out effect
+            loadingScreen.classList.add('fade-out');
+            
+            // Hide the loading screen after the fade-out animation
+            setTimeout(() => {
                 loadingScreen.style.display = 'none';
-            }, 2000)
+            }, 1000); // Match this with your CSS transition duration
         });
+    </script>
+
+    <script>
+       
 
         document.addEventListener("DOMContentLoaded", function () {
           const sections = [document.querySelector("#date"),

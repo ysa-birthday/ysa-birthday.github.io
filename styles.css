@@ -3,8 +3,42 @@ body {
     background-image: url("./bcg.png");
 }
 
-.loadingScreen {
+
+/****** BACKGROUND MUSIC BUTTON *******/
+/****** BACKGROUND MUSIC BUTTON *******/
+#playPauseButton {
+    margin-top: 5vh;
+    width: 80px;  /* Adjust size */
+    height: 80px; /* Adjust size */
+    background-color: #b7a696;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+#playPauseButton::before {
+    content: '';
     position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 18px solid white; /* Triangle color */
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    transform: translate(-50%, -50%);
+}
+
+/* Hover effect */
+#playPauseButton:hover {
+    background-color: #d4bfab;
+}
+/****** LOADING SCREEN *******/
+.loadingScreen {
+    position: fixed;
     z-index: 5;
     font-size: 10vw;
     line-height: 0.8;
@@ -13,28 +47,16 @@ body {
     height: 100vh;
     background-color: white;
     display: flex;
+    flex-direction: column; /* Stack text and button vertically */
     align-items: center;
     justify-content: center;
     opacity: 1; /* Start fully visible */
-    transition: opacity 3s ease-out; /* Smooth fade-out effect */
-  }
+    transition: opacity 1s ease-out; /* Smooth fade-out effect */
+}
 
 .loadingScreen.fade-out {
     opacity: 0; /* Fade out to invisible */
-}
-
-.loadingText {
-    opacity: 0; /* Hide the text initially */
-    animation: fadeInWithFont 2s ease-out forwards;
-}
-
-@keyframes fadeInWithFont {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    pointer-events: none; /* Prevent interaction after fading */
 }
 
 /**** LEGIBLE CURSIVE FONT ****/
