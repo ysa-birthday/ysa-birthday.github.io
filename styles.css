@@ -400,6 +400,11 @@ a, a:link, a:visited {
     transition: opacity 2s ease-out, transform 2s ease-out; /* Ensures smooth fade */
 }
 
+#guest_hide {
+    display: none;
+    visibility: hidden;
+}
+
 .rsvp_date {
     /* word-spacing: 60px; */
     align-self: end;
